@@ -5,10 +5,10 @@
 from fastapi import Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from jose import JWTError, jwt
-from app.api.core.config import settings
-from app.api.core.security import create_access_token
-from app.api.db.session import SessionLocal
-from app.api.models import models
+from app.core.config import settings
+from app.core.security import create_access_token
+from app.db.session import SessionLocal
+from app.models import models
 
 def get_db():
     db = SessionLocal()
